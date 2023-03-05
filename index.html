@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Formatura</title>
+</head>
+<body>
+    <header id="header">
+        <div class="navigation">
+            <a href="#section1">Inicio</a>
+            <a href="#section2">Data e hora</a>
+            <a href="#section3">Fotos</a>
+            <a href="#section1">Agradecimentos</a>
+            <div class="vertical_divider"></div>
+            <button class="ghost_button" onclick="document.getElementById('section4').scrollIntoView()">Ir para o convite</button>
+        </div>
+    </header>
+    <div class="container">
+        <section id="section1">
+            <div>
+                <div>
+                    <div>
+                        <h1>O fim de uma jornada e o começo de outra: formatura 2023</h1>
+                        <h2>hisnaider ribeiro campello</h2>
+                    </div>
+                    <h3>Venha celebrar a minha primeira grande conquista acadêmica e junte-se a mim nesse marco de muitas outras vitórias que estão por vir</h2>
+                </div>
+                <button class="primary_button" onclick="document.getElementById('section4').scrollIntoView()">Ir para o convite</button>
+            </div>
+            <div class="img">
+            </div>
+        </section>
+        <section id="section2">
+            <div>
+                <div class="img"></div>
+                <div>
+                    <h1>Data e hora</h1>
+                    <p>A cerimônia será realizada no dia 17 de março às 19 horas e sua presença será muito importante para tornar este dia ainda mais memorável. Espero ansiosamente por sua presença!</p>
+                </div>
+            </div> 
+            <div>
+                <div>
+                    <h1>Localização</h1>
+                    <p>A celebração será realizado no CIDEC, localizado dentro da FURG, na Av. Itália, km 8, bairro Carreiros.</p>
+                </div>
+                <div class="img"></div>
+            </div>
+        </section>
+        <section id="section3">
+            <div>
+                <div class="horizontal_divider"></div>
+                <h1>Fotos</h1>
+                <div class="horizontal_divider"></div>
+            </div>
+            <div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+            </div>
+        </section>
+    </div>
+    <div id="container2">
+        
+        <section id="section4">
+            <div>
+                <div class="horizontal_divider"></div>
+                <h1>Marcar presença</h1>
+                <div class="horizontal_divider"></div>
+            </div>
+            <div id="invitation">
+                <div>
+                    <P>Prezados amigos e familiares,
+                        <br><br>
+                        Com grande alegria, venho convidá-los para a celebração da minha formatura juntamente com meus colegas. Este evento é um marco importante em nossas vidas e gostaríamos muito de tê-los ao nosso lado, dividindo conosco a alegria desta conquista.
+                        <br><br>
+                        Será uma noite especial, repleta de emoções, e não poderia deixar de dividir esse momento único com vocês. Sua presença é fundamental para tornar essa noite ainda mais inesquecível.
+                        <br><br>
+                        Desde já agradeço a atenção e espero contar com a presença de cada um de vocês em minha formatura.
+                        <br><br>
+                        Atenciosamente,
+                        <br><br>
+                        Hisnaider Ribeiro Campello
+                    </P>
+                    <button class="primary_button">Marcar presença</button>
+                </div>
+                <div style="align-self: center;">
+                    <img src="./images/Símbolo SI.png" style="max-width: 450px; background-color: transparent;">
+                    <h1>Sistemas de Informação</h1>
+                </div>
+            </div>
+            <video autoplay muted loop>
+                <source src="./images/SISTEMAS DE INFORMAÇÃO.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo HTML5.
+            </video>
+        </section>
+    </div>
+    <div id="container2" style="background-color: #262626;">
+        <footer>
+            <div>
+                <div id="logos_container">
+                    <div class="logo" style="background-image: url('./images/Shalon_logo.png'); width: 192px;"></div>
+                    <div class="logo" style="background-image: url('./images/FURG_logo.png'); width: 174px"></div>
+                    <div class="logo" style="background-image: url('./images/C3_logo.png'); width: 128px"></div>
+                </div>
+                <div class="footer_navigation">
+                    <a href="#section1">Inicio</a>
+                    <a href="#section2">Data e hora</a>
+                    <a href="#section3">Fotos</a>
+                    <a href="#Inicio">Agradecimentos</a>
+                </div>
+            </div>
+            <div class="horizontal_divider"></div>
+            <div id="created_by">
+                <p>Feito por Hisnaider Campello</p>
+                <div>
+                    <img src="./images/instagram.png" class="midia_social">
+                    <img src="./images/linkedin.png" class="midia_social">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
