@@ -1,0 +1,71 @@
+#picture_section{
+    padding-top: 80px;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+#picture_section > div:first-child {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    gap: 24px;
+}
+
+#picture_section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: white;
+}
+
+#picture_section > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+#picture_section .picture {
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#picture_section .picture:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #picture_section{
+        padding-top:0px;
+        gap: 24px;
+    }
+
+    #picture_section > div:first-child{
+        gap: 10px;
+    }
+
+    #picture_section > div{
+        gap: 10px;
+    }
+
+    #picture_section .picture {
+        width: 100%;
+        height: 100px;
+    }
+
+    #picture_section h1 {
+        font-size: 30px;
+    }
+
+}

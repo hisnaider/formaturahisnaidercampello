@@ -5,40 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/heroSection.css">
+    <link rel="stylesheet" type="text/css" href="./styles/informationSection.css">
+    <link rel="stylesheet" type="text/css" href="./styles/pictureSection.css">
+    <link rel="stylesheet" type="text/css" href="./styles/thanksSection.css">
+    <link rel="stylesheet" type="text/css" href="./styles/invitationSection.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <title>Formatura</title>
 </head>
 <body>
+    <div id="overlay">
+        <!-- <div>
+            <img id="overlay_picture" src="./images/foto 4.jpg">
+            <p style="position: absolute; top: 40px; background-color: transparent; color: white;">Clique/toque em qualquer parte da pagina pra fechar</p>
+        </div> -->
+    </div>
     <header id="header">
         <div class="navigation">
-            <a href="#section1">Inicio</a>
-            <a href="#section2">Data e hora</a>
-            <a href="#section3">Fotos</a>
-            <a href="#section1">Agradecimentos</a>
+            <a data-section="hero_section" href="#hero_section">Inicio</a>
+            <a data-section="information_section" href="#information_section">Data e hora</a>
+            <a data-section="picture_section" href="#picture_section">Fotos</a>
+            <!-- <a data-section="thanks_section" href="#thanks_section">Agradecimentos</a> -->
             <div class="vertical_divider"></div>
-            <button class="ghost_button" onclick="document.getElementById('section4').scrollIntoView()">Ir para o convite</button>
+            <button class="ghost_button" onclick="document.getElementById('invitation_section').scrollIntoView({behavior:'smooth'})">Ir para o convite</button>
         </div>
     </header>
     <div class="container">
-        <section id="section1">
+        <section id="hero_section">
             <div>
                 <div>
-                    <div>
+                    <div style="background-color: transparent;">
                         <h1>O fim de uma jornada e o começo de outra: formatura 2023</h1>
                         <h2>hisnaider ribeiro campello</h2>
                     </div>
                     <h3>Venha celebrar a minha primeira grande conquista acadêmica e junte-se a mim nesse marco de muitas outras vitórias que estão por vir</h2>
                 </div>
-                <button class="primary_button" onclick="document.getElementById('section4').scrollIntoView()">Ir para o convite</button>
+                <button class="primary_button" onclick="document.getElementById('invitation_section').scrollIntoView()">Ir para o convite</button>
             </div>
             <div class="img">
             </div>
         </section>
-        <section id="section2">
+        <section id="information_section">
             <div>
-                <div class="img"></div>
+                <div class="img" style="background-image: url('./images/calendar.png'); background-size: contain;"></div>
                 <div>
                     <h1>Data e hora</h1>
                     <p>A cerimônia será realizada no dia 17 de março às 19 horas e sua presença será muito importante para tornar este dia ainda mais memorável. Espero ansiosamente por sua presença!</p>
@@ -49,31 +61,53 @@
                     <h1>Localização</h1>
                     <p>A celebração será realizado no CIDEC, localizado dentro da FURG, na Av. Itália, km 8, bairro Carreiros.</p>
                 </div>
-                <div class="img"></div>
+                <div class="img" style="background-image: url('./images/map.png');"></div>
             </div>
         </section>
-        <section id="section3">
+        <section id="picture_section">
             <div>
                 <div class="horizontal_divider"></div>
                 <h1>Fotos</h1>
                 <div class="horizontal_divider"></div>
             </div>
             <div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
-                <div class="img"></div>
+                <div class="picture" style="background-image: url('./images/foto\ 1.jpg'); background-position: center 20%;" onclick="fullscreenImage(1)"></div>
+                <div class="picture" style="background-image: url('./images/foto\ 2.jpg');" onclick="fullscreenImage(2)"></div>
+                <div class="picture" style="background-image: url('./images/foto\ 3.jpg'); background-position: center 20%;" onclick="fullscreenImage(3)"></div>
+                <div class="picture" style="background-image: url('./images/foto\ 4.jpg'); background-position: 45% center;" onclick="fullscreenImage(4)"></div>
+                <div class="picture" style="background-image: url('./images/foto\ 5.jpg');" onclick="fullscreenImage(5)"></div>
+                <div class="picture" style="background-image: url('./images/foto\ 6.jpg'); background-position: center 20%;" onclick="fullscreenImage(6)"></div>
+                <div class="picture" style="background-image: url('./images/foto\ 7.jpg'); background-position: 48% center;" onclick="fullscreenImage(7)"></div>
+                <div class="picture" style="background-image: url('./images/foto\ 8.jpg'); background-position: 70% center;" onclick="fullscreenImage(8)"></div>
+                <div class="picture" style="background-image: url('./images/foto\ 9.jpg'); background-position: center 20%;" onclick="fullscreenImage(9)"></div>
             </div>
         </section>
+        <!-- <section id="thanks_section">
+            <div>
+                <div class="horizontal_divider"></div>
+                <h1>Agradecimentos</h1>
+                <div class="horizontal_divider"></div>
+            </div>
+            <div>
+                <P>Queridos pais, irmãs e familiares, hoje é um dia muito especial para mim e não poderia deixar de agradecer por todo o amor, 
+                    carinho e apoio que vocês me deram ao longo desses anos. Sem a ajuda de vocês, eu não teria chegado tão longe e não estaria 
+                    comemorando essa grande conquista. Agradeço também aos meus amigos, que sempre estiveram ao meu lado, me incentivando e me 
+                    fazendo sorrir mesmo nos momentos mais difíceis. E acima de tudo, agradeço a Deus por me guiar, me proteger e me abençoar. 
+                    Por fim, gostaria de agradecer ao Chat GPT, que me ajudou muito na reta final do curso.
+                    Obrigado a todos por fazerem parte dessa jornada comigo!</P>
+            </div>
+            <div id="images_row">
+                <div class="img" style="background-image: url('./images/foto\ 10.jpg');" onclick="fullscreenImage(10)"></div>
+                <div class="img" style="background-image: url('./images/foto\ 11.jpg'); background-position: 80% 40%;" onclick="fullscreenImage(11)"></div>
+                <div class="img" style="background-image: url('./images/foto\ 12.jpg');" onclick="fullscreenImage(12)"></div>
+                <div class="img" style="background-image: url('./images/foto\ 10.jpg');" ></div>
+                <div class="img" style="background-image: url('./images/foto\ 10.jpg');" ></div>
+            </div>
+        </section> -->
     </div>
-    <div id="container2">
+    <div class="container2">
         
-        <section id="section4">
+        <section id="invitation_section">
             <div>
                 <div class="horizontal_divider"></div>
                 <h1>Marcar presença</h1>
@@ -96,8 +130,7 @@
                     <button class="primary_button">Marcar presença</button>
                 </div>
                 <div style="align-self: center;">
-                    <img src="./images/Símbolo SI.png" style="max-width: 450px; background-color: transparent;">
-                    <h1>Sistemas de Informação</h1>
+                    <img src="./images/Símbolo SI.png">
                 </div>
             </div>
             <video autoplay muted loop>
@@ -106,19 +139,18 @@
             </video>
         </section>
     </div>
-    <div id="container2" style="background-color: #262626;">
+    <div style="background-color: #262626;">
         <footer>
             <div>
                 <div id="logos_container">
-                    <div class="logo" style="background-image: url('./images/Shalon_logo.png'); width: 192px;"></div>
-                    <div class="logo" style="background-image: url('./images/FURG_logo.png'); width: 174px"></div>
-                    <div class="logo" style="background-image: url('./images/C3_logo.png'); width: 128px"></div>
+                    <div class="logo" style="background-image: url('./images/Shalon_logo.png');"></div>
+                    <div class="logo" style="background-image: url('./images/FURG_logo.png');"></div>
+                    <div class="logo" style="background-image: url('./images/C3_logo.png');"></div>
                 </div>
                 <div class="footer_navigation">
-                    <a href="#section1">Inicio</a>
-                    <a href="#section2">Data e hora</a>
-                    <a href="#section3">Fotos</a>
-                    <a href="#Inicio">Agradecimentos</a>
+                    <a href="#hero_section">Inicio</a>
+                    <a href="#information_section">Data e hora</a>
+                    <a href="#picture_section">Fotos</a>
                 </div>
             </div>
             <div class="horizontal_divider"></div>
@@ -132,5 +164,7 @@
         </footer>
     </div>
 
+
+    <script src="./index.js"></script>
 </body>
 </html>
