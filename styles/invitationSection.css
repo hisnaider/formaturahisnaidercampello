@@ -41,7 +41,7 @@ video {
 }
 
 #invitation_section img{
-    max-width: 450px; 
+    max-width: 450px;
     background-color: transparent;
 }
 
@@ -82,9 +82,14 @@ video {
     background-color: transparent;
 }
 
+@media (max-width:1250px){
+    #invitation_section img{
+        max-width: 300px; 
+    }
+}
 
 
-@media (max-width: 768px){
+@media (max-width:900px){
     #invitation_section{
         padding: 40px 10px;
         margin-top: 0px;

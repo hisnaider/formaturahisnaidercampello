@@ -34,7 +34,6 @@
 }
 
 #information_section .img {
-    background-image: url("../images/Frame\ 3.png");
     background-position: center center;
     width: 1000px;
     height: 500px;
@@ -42,7 +41,7 @@
 
 @media (max-width: 768px) {
     #information_section{
-        padding: 80px 0px 0px 0px;
+        padding-top: 40px;
     }
     
     #information_section div {

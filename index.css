@@ -113,6 +113,10 @@ a:hover{
     color: #2764FF;
 }
 
+.ghost_button:hover{
+    cursor: pointer;
+}
+
 .primary_button{
     display: flex;
     flex-direction: row;
@@ -127,6 +131,10 @@ a:hover{
     line-height: 27px;
     color: white;
     border: none;
+}
+
+.primary_button:hover{
+    cursor: pointer;
 }
 
 footer{
@@ -181,7 +189,10 @@ footer .horizontal_divider{
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.5;
+}
 
+.logo:hover{
+    cursor: pointer;
 }
 
 #created_by{
@@ -239,7 +250,7 @@ footer .horizontal_divider{
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding: 10px 10px;
         height: 30px;
     }
@@ -274,7 +285,7 @@ footer .horizontal_divider{
     }
 
     .vertical_divider{
-        margin: 0px auto;
+        margin: 0px 0px 0px auto;
     }
 
     footer{
@@ -296,5 +307,15 @@ footer .horizontal_divider{
         height:40px;
         width: 120px;
     }
+    #created_by img{
+        height: 25px;
+        width: auto;
+    }
+
+    #overlay_picture{
+        max-width: calc(100vw - 20px);
+        max-height: calc(100vh - 20px);
+    }
+    
 
 }
